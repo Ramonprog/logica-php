@@ -34,3 +34,21 @@ for ($i = 10; $i > 0; $i--) {
   }
   sleep(1);
 }
+
+// foreach
+
+$basket = [
+    ['fruit' => 'apple', 'price' => 0.5],
+    ['fruit' => 'banana', 'price' => 0.8],
+    ['fruit' => 'orange', 'price' => 0.7],
+];
+
+$total = 0;
+
+
+foreach ($basket as $fruit) {
+    echo "Fruit: " . $fruit['fruit'] . ", Price: $" . $fruit['price'] . "\n";
+    $total += $fruit['price']; 
+}
+
+echo "Total Price: $" . $total . "\n";
