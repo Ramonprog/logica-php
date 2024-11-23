@@ -22,3 +22,15 @@ while ($attempts < $maxAttempts) {
     echo "Sorry, wrong guess. Try again. \n";
   }
 }
+
+// for
+
+echo "Rocket lauch countdown: \n";
+
+for ($i = 10; $i > 0; $i--) {
+  echo "$i ... ";
+  if(1 == $i) {
+    echo "Launch! 🚀";
+  }
+  sleep(1);
+}
