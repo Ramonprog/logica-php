@@ -42,7 +42,22 @@ function sum(...$numbers) {
 echo sum(5, 10, 15);
 
 function introduceTeam($teamName, ...$members) {
-  return "The $teamName team has the following members: " . implode(", ", $members);
+  return "The $teamName team has the following members: " . implode(", ", $members) ;
 }
 
 echo introduceTeam("Laravel", "Taylor", "Cedric", "Dayle");
+
+//funções anônimas
+
+$greet = function($name) {
+  return "Hello, $name \n";
+};
+
+echo $greet("World");
+
+$numbers = [1, 2, 3, 4, 5];
+$square = array_map(function($number) {
+  return $number * $number;
+}, $numbers);
+
+echo implode(", ", $square);
