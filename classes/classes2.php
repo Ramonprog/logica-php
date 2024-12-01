@@ -23,5 +23,16 @@ class Employee extends Person {
     }
 }
 
-$employee = new Employee("John Doe", 30, "Software Engineer");
-echo $employee->introduce();
+$people = [
+  new Employee("John Doe", 30, "Software Engineer"),
+  new Employee("Alisson Ramon", 25, "Software Engineer"),
+  new Employee("Carlos Santos", 40, "Software Engineer"),
+];
+
+function introduce(Person $person){
+  echo $person->introduce();
+}
+
+foreach($people as $person){
+  introduce($person);
+}
